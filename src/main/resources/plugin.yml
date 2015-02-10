@@ -1,18 +1,13 @@
-name: BukkitPluginTemplate
-main: nz.co.lolnet.BukkitPluginTemplate.BukkitPluginTemplate
+name: Parkour
+main: nz.co.lolnet.arns.parkour.main
 version: ${project.version}
-authors: [James Anderson]
+authors: [Arns, James Anderson]
 commands:
-  BukkitPluginTemplateCommand:
-    description: some command
-    usage: /<command> [option]
-       
+  Parkour:
+    description: Main command!
+    usage: /parkour
+  Parkour Help:
+    description: Parkour help!
+    usage: /parkour help
+    
 permissions:
-  BukkitPluginTemplate.*:
-    description: Gives access to all BukkitPluginTemplate commands
-    default: op
-    children:
-      BukkitPluginTemplate.use: true
-  BukkitPluginTemplate.use:
-    description: Allows player to use the command /BukkitPluginTemplateCommand
-    default: op
