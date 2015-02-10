@@ -1,6 +1,6 @@
 name: Parkour
-main: nz.co.lolnet.arns.parkour.main
-version: ${project.version}
+main: nz.co.lolnet.arns.parkour.Main
+version: 0.1
 authors: [Arns, James Anderson]
 commands:
   Parkour:

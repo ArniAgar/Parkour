@@ -1,4 +1,4 @@
-package nz.co.lolnet.arns;
+package nz.co.lolnet.arns.parkour;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
