@@ -38,10 +38,15 @@ public class Main extends JavaPlugin {
                     player.sendMessage("Commands coming soon!");
                 }
                 if (args[0].equalsIgnoreCase("getwand")) {
-                    player.sendMessage("You now have the wand of doom!");
-                    player.sendMessage("You can run the follwing commands:");
-                    player.sendMessage("/parkour select - This will allow you to select the area the parkour is in!");
-                    player.sendMessage("/parkour addWaypoint - This allows you to select a waypoint so when a player dies they will go back to that point!");
+                    if (player.getInventory().addItem(Main.wand).size() > 0) {
+                        player.sendMessage("You now have the wand of doom!");
+                        player.sendMessage("You can run the follwing commands:");
+                        player.sendMessage("/parkour select - This will allow you to select the area the parkour is in!");
+                        player.sendMessage("/parkour addWaypoint - This allows you to select a waypoint so when a player dies they will go back to that point!");
+
+                    } else {
+                        player.sendMessage("Your getInventory is full.");
+                    }
                 }
 
             }
