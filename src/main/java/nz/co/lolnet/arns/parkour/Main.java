@@ -55,20 +55,20 @@ public class Main extends JavaPlugin {
                     String playerName = player.getName();
                     Location[] locations = new Location[2];
                     playerWandLocations.put(playerName, locations);
-                } else if (args[0].equalsIgnoreCase("done")) {
+                } else if (args[0].equalsIgnoreCase("create")) {
                     String playerName = player.getName();
-                    Location[] location = playerWandLocations.get(playerName);
-                    if (location == null || location.length == 0) {
+                    Location[] locations = playerWandLocations.get(playerName);
+                    if (locations == null || locations.length == 0) {
                         player.sendMessage("You need to run /parkour select first");
                         return true;
                     }
 
-                    if (location[0] == null) {
+                    if (locations[0] == null) {
                         player.sendMessage("First Corner hasn't been selected yet");
                         return true;
                     }
 
-                    if (location[1] == null) {
+                    if (locations[1] == null) {
                         player.sendMessage("Secound Corner hasn't been selected yet");
                         return true;
                     }
