@@ -39,8 +39,7 @@ public class Main extends JavaPlugin {
             if (args.length >= 1) {
                 if (args[0].equalsIgnoreCase("help")) {
                     player.sendMessage("Commands coming soon!");
-                }
-                if (args[0].equalsIgnoreCase("getwand")) {
+                } else if (args[0].equalsIgnoreCase("getwand")) {
                     HashMap<Integer, ItemStack> remainingItemsNotAdded = player.getInventory().addItem(Main.wand);
                     if (remainingItemsNotAdded.isEmpty()) {
                         player.sendMessage("You now have the wand of doom!");
