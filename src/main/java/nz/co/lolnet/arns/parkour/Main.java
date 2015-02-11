@@ -15,6 +15,7 @@ public class Main extends JavaPlugin {
     public void onEnable() {
         getLogger().info("Hello Console,How are you today? Parkour has been enabled!");
         saveDefaultConfig();
+        getServer().getPluginManager().registerEvents(new MyListener(this), this);
 
     }
 
