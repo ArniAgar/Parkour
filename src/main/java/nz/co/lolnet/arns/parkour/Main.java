@@ -16,8 +16,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Main extends JavaPlugin {
 
     public static ItemStack wand;
-    public static HashMap<String,Location[]> playerWandLocations = new HashMap<>();
-    
+    public static HashMap<String, Location[]> playerWandLocations = new HashMap<>();
+
     @Override
     public void onEnable() {
         getLogger().info("Hello Console,How are you today? Parkour has been enabled!");
@@ -51,10 +51,31 @@ public class Main extends JavaPlugin {
                     player.sendMessage("You can run the follwing commands:");
                     player.sendMessage("/parkour select - This will allow you to select the area the parkour is in!");
                     player.sendMessage("/parkour addWaypoint - This allows you to select a waypoint so when a player dies they will go back to that point!");
+                } else if (args[0].equalsIgnoreCase("select")) {
+                    String playerName = player.getName();
+                    Location[] locations = new Location[2];
+                    playerWandLocations.put(playerName, locations);
+                } else if (args[0].equalsIgnoreCase("done")) {
+                    String playerName = player.getName();
+                    Location[] location = playerWandLocations.get(playerName);
+                    if (location == null || location.length == 0) {
+                        player.sendMessage("You need to run /parkour select first");
+                        return true;
+                    }
+
+                    if (location[0] == null) {
+                        player.sendMessage("First Corner hasn't been selected yet");
+                        return true;
+                    }
+
+                    if (location[1] == null) {
+                        player.sendMessage("Secound Corner hasn't been selected yet");
+                        return true;
+                    }
                 }
 
             }
-
+            return true;
         }
         return false;
     }
