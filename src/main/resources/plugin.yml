@@ -6,8 +6,4 @@ commands:
   Parkour:
     description: Main command!
     usage: /parkour
-  Parkour Help:
-    description: Parkour help!
-    usage: /parkour help
-    
 permissions:
