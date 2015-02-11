@@ -1,2 +1,5 @@
-## YAML Template.
----
+#Config file for Parkour!
+#Plugin by Arns, helped with by James!
+
+#Tool for selecting parts of the parkour.
+ WandItem: 383
