@@ -9,7 +9,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 /**
  *
- * @author Arns
+ * @author Arns with helpof James137137
  */
 public class Main extends JavaPlugin {
     
@@ -37,7 +37,11 @@ public class Main extends JavaPlugin {
                 if (args[0].equalsIgnoreCase("help")) {
                     player.sendMessage("Commands coming soon!");
                 }
-                
+                if (args[0].equalsIgnoreCase("getwand")) {
+                    player.sendMessage("You now have the wand of doom!");
+                    player.sendMessage("You can run the follwing commands:");
+                    player.sendMessage("/parkour select - This will allow you to select the area the parkour is in!");
+                    player.sendMessage("/parkour addWaypoint - This allows you to select a waypoint so when a player dies they will go back to that point!");
             }
             
         }
