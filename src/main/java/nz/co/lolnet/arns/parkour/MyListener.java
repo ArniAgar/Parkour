@@ -16,7 +16,9 @@ import org.bukkit.event.player.PlayerInteractEvent;
  */
 class MyListener implements Listener {
 
+    Main plugin;
     public MyListener(Main aThis) {
+        plugin = aThis;
     }
 
     @EventHandler
