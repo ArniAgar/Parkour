@@ -14,6 +14,8 @@ public class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         getLogger().info("Hello Console,How are you today? Parkour has been enabled!");
+        saveDefaultConfig();
+
     }
 
     public void onDisable() {
