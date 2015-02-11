@@ -42,13 +42,14 @@ public class Main extends JavaPlugin {
                     HashMap<Integer, ItemStack> remainingItemsNotAdded = player.getInventory().addItem(Main.wand);
                     if (remainingItemsNotAdded.isEmpty()) {
                         player.sendMessage("You now have the wand of doom!");
-                        player.sendMessage("You can run the follwing commands:");
-                        player.sendMessage("/parkour select - This will allow you to select the area the parkour is in!");
-                        player.sendMessage("/parkour addWaypoint - This allows you to select a waypoint so when a player dies they will go back to that point!");
 
                     } else {
-                        player.sendMessage("Your getInventory is full.");
+                        player.sendMessage("Item dropped on ground, inventory it full.");
+                        player.getWorld().dropItemNaturally(player.getLocation(), wand);
                     }
+                    player.sendMessage("You can run the follwing commands:");
+                    player.sendMessage("/parkour select - This will allow you to select the area the parkour is in!");
+                    player.sendMessage("/parkour addWaypoint - This allows you to select a waypoint so when a player dies they will go back to that point!");
                 }
 
             }
