@@ -1,6 +1,7 @@
 package nz.co.lolnet.arns.parkour;
 
 import java.util.HashMap;
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -15,7 +16,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Main extends JavaPlugin {
 
     public static ItemStack wand;
-
+    public static HashMap<String,Location[]> playerWandLocations = new HashMap<>();
+    
     @Override
     public void onEnable() {
         getLogger().info("Hello Console,How are you today? Parkour has been enabled!");
