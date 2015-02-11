@@ -1,5 +1,6 @@
 package nz.co.lolnet.arns.parkour;
 
+import java.util.HashMap;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -38,7 +39,8 @@ public class Main extends JavaPlugin {
                     player.sendMessage("Commands coming soon!");
                 }
                 if (args[0].equalsIgnoreCase("getwand")) {
-                    if (player.getInventory().addItem(Main.wand).size() > 0) {
+                    HashMap<Integer, ItemStack> remainingItemsNotAdded = player.getInventory().addItem(Main.wand);
+                    if (remainingItemsNotAdded.isEmpty()) {
                         player.sendMessage("You now have the wand of doom!");
                         player.sendMessage("You can run the follwing commands:");
                         player.sendMessage("/parkour select - This will allow you to select the area the parkour is in!");
