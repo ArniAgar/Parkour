@@ -52,6 +52,7 @@ public class Main extends JavaPlugin {
                     player.sendMessage("/parkour select - This will allow you to select the area the parkour is in!");
                     player.sendMessage("/parkour addWaypoint - This allows you to select a waypoint so when a player dies they will go back to that point!");
                 } else if (args[0].equalsIgnoreCase("select")) {
+                    player.sendMessage("Select 2 corners of the map and type /parkour done!");
                     String playerName = player.getName();
                     Location[] locations = new Location[2];
                     playerWandLocations.put(playerName, locations);
