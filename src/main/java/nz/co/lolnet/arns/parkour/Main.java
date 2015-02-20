@@ -8,6 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
+import nz.co.lolnet.arns.parkour.database.mysql;
 
 /**
  *
@@ -17,6 +18,7 @@ public class Main extends JavaPlugin {
 
     public static ItemStack wand;
     public static HashMap<String, Location[]> playerWandLocations = new HashMap<>();
+    MySQL mysql;
 
     @Override
     public void onEnable() {
@@ -24,6 +26,7 @@ public class Main extends JavaPlugin {
         saveDefaultConfig();
         getServer().getPluginManager().registerEvents(new MyListener(this), this);
         wand = new ItemStack(Material.getMaterial(this.getConfig().getInt("WandItem")));
+        //mysql = new MySQL('localhost', '3306', 'parkour', 'testmysql');
 
     }
 
